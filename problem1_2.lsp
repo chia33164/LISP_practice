@@ -1,0 +1,20 @@
+;;; file: problem1_2.lsp
+
+(defun palindrome (list)
+    (if (endp list)
+        (format t "~A is palindrome \~%" list)
+        (let ((ttt list))
+            (setf ttt (reverse ttt))
+            (if (equal ttt list)
+                (format t "~A is palindrome \~%" list)
+                (format t "~A is not palindrome \~%" list )
+            )
+        )
+    )
+)
+
+(palindrome '(a b c))
+(palindrome '(m a d a m))
+(palindrome '(cat dog))
+(palindrome '())
+(palindrome '(cat dog bird bird dog cat))
